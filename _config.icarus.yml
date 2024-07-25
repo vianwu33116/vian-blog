@@ -12,14 +12,14 @@ head:
     # https://developer.mozilla.org/en-US/docs/Web/Manifest
     manifest:
         # Name of the web application (default to the site title)
-        name: 
+        name: Icaurs - Hexo Theme
         # The displayed name of the web application
         # when there is not enough space to display full name
-        short_name: 
+        short_name: Icarus
         # The start URL of the web application
-        start_url: 
+        start_url: https://ppoffice.github.io/
         # The default theme color for the application
-        theme_color: 
+        theme_color: "#3273dc"
         # A placeholder background color for the application page to display
         # before its stylesheet is loaded
         background_color: 
@@ -377,7 +377,7 @@ plugins:
     # https://analytics.google.com
     google_analytics:
         # Google Analytics tracking ID
-        tracking_id: 
+        tracking_id: ${TRACK_ID}
     # Hotjar user feedback plugin
     # https://www.hotjar.com/
     hotjar:
