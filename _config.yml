@@ -6,8 +6,8 @@ author: Vian
 language: en
 timezone: ''
 url: http://example.com
-permalink: ':year/:month/:day/:title/'
-permalink_defaults: null
+permalink: ':title/'
+permalink_defaults: 
 pretty_urls:
   trailing_index: true
   trailing_html: true
