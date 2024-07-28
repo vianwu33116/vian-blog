@@ -59,5 +59,12 @@ include: null
 exclude: null
 ignore: null
 theme: icarus
+comment:
+    type: utterances
+    repo: vianwu33116/blog-issue
+    issue_term: title
+    issue_number: 30
+    label: blog-comment
+    theme: github-light
 deploy:
   type: ''
