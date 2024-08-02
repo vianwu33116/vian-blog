@@ -6,8 +6,8 @@ author: Vian
 language: en
 timezone: ''
 url: http://example.com
-permalink: ':title/'
-permalink_defaults: 
+permalink: ':year/:month/:day/:title/'
+permalink_defaults: null
 pretty_urls:
   trailing_index: true
   trailing_html: true
@@ -63,7 +63,6 @@ comment:
     type: utterances
     repo: vianwu33116/blog-issue
     issue_term: title
-    issue_number: 30
     label: blog-comment
     theme: github-light
 deploy:
