@@ -162,9 +162,17 @@ Git 基本流程中的儲存庫是在本地端，也就是你所編寫程式碼�
 <br/>
 
 <!-- ## 特殊情況
-* 有些資料並不想追蹤 (git ignore)
-* Release tag
-* Upstream case
+* 有些資料並不想追蹤 (git ignore  檔案名稱 .gitignore)
+前面提到 git 能追蹤資料夾底下中的所有檔案，但是假設就是有些檔案不想追蹤或也不需要修改該怎麼辦呢
+    * 常見的使用情況: db.json, *.log, node_modules/, public/, .deploy*/
+(.gitkeep?)
+* Release tag (提到 tag)
+    * Thingsboard 有 tag 功能
+    * tag 並不會隨分支的切換而移動 (與 HEAD 不同)
+    * 通常出現在開源的 repo 中
+        * 不想被後面微調的 commit 影響
+        * 公司或團隊比較不會下載錯的版本 
+* Upstream case (我想合併其他但不是我的 repo)
 
 <br/>
 
