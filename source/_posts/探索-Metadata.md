@@ -77,3 +77,11 @@ metadata 1.0 → metadata 2.0 → metadata 3.0
 
 ## Summary
 個人認為 metadata 的角色相當重要，畢竟它能影響著數據管理和服務應用的走向和潛力。開頭曾提到資料就是錢這句話，表示資料有其珍貴性，當人們能想出如何透過既有的 metadata 創造出千萬種可能的應用場景和服務時，這時資料就被視作是黃金，反之，若無法做任何應用，黃金也能是糞土。
+
+<br/>
+
+## Reference
+[Metadata Basics](https://www.dublincore.org/resources/metadata-basics/)
+[Metadata基礎導論](https://metadata.teldap.tw/bibliography/training/tra060616.pdf)
+[Creating and Implementing a Metadata Strategy](https://www.dataversity.net/creating-and-implementing-a-metadata-strategy/)
+[Apple App Metadata](https://developer.apple.com/documentation/appstoreconnectapi/app-metadata)

@@ -125,3 +125,10 @@ OpenProject 有內建計時工具這點令我頗感興致，這項功能主要�
 
 ## 總結
 開源版本的 OpenProject 比較適合有預算考量的中小型或新創公司，雖然在整合第三方資源上沒有那麼多元還有沒有付費版本的備份功能(需要額外建立備份流程)等小缺點，但這個版本提供的功能對小團隊來說其實已經相當足夠。若需要代託管或更進階的功能通常就需要考慮商用版本的 OpenProject 或其他付費工具，因為有付費所以有技術支援、分析報告、多元的角色權限分配和較完整的第三方資源整合，例如跟 DevOps 結合，有些甚至有提供 KPI 指標等進階功能。在挑選工具時，除了文章上提到的挑選方向，最根本的還是先確認團隊的需求，先把需求列出來再做篩選，這樣更容易找到適合團隊的資源。
+
+<br/>
+
+## Reference
+[OpenProject official document](https://www.openproject.org/docs/)
+[Installation & operations guide](https://www.openproject.org/docs/installation-and-operations/)
+[OpenProject community](https://community.openproject.org/projects/openproject/)
