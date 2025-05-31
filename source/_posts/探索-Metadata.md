@@ -3,7 +3,7 @@ title: 探索 Metadata
 toc: true
 date: 2025-02-26 05:34:34
 tags: metadata
-categories:
+categories: Software
 ---
 
 起初會想探索這個主題主要是由於工作需求需要針對平台的應用定義出要使用的 metadata，在探索的過程中，發現這個主題蠻有趣的，也在探索的過程中，意識到 "Data is money" 這句話並不假，以及資料有其重要性和實踐性。
