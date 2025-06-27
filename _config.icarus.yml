@@ -17,7 +17,7 @@ head:
         # when there is not enough space to display full name
         short_name: Blog
         # The start URL of the web application
-        start_url: https://vian-blog.onrender.com/
+        start_url: https://vianology.org/
         # The default theme color for the application
         theme_color: '#3273dc'
         # A placeholder background color for the application page to display
@@ -286,7 +286,7 @@ widgets:
     # Archives widget configurations
     -
         # Where should the widget be placed, left sidebar or right sidebar
-        position: right
+        position: ''
         type: archives
     # Tags widget configurations
     -
