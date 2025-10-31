@@ -6,7 +6,6 @@ tags:
 categories: Software
 ---
 
-## 引言
 看完這篇文章你可能會對 SDD (Specification-Driven Development) 有些許的認識, 也會知道為什麼原本以前就存在的這個詞彙又再度掀起一股熱潮，但這篇文章的主要目的是希望大家能去思考開發產品背後的意義是什麼。
 
 <!-- more -->
