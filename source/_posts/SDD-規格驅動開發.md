@@ -13,32 +13,53 @@ categories: Software
 <br/>
 
 ## SDD 是什麼?
-SDD (Specification-Driven Development) 指的是規格驅動開發。意思是得知開發需求後，不先急著開發，而是先寫好規格文件。有些嚴謹的團隊會更進一步要求需經由專業人員審核規格文件後才能開始開發。SDD 近期廣受開發者討論，然而他並不是一個新創詞彙。SDD 的概念早在1990s 就出現在論文中，在 2004 年 Jonathan S. Ostroff, David Makalsky, Richard F. Paige 所發表的論文《Agile Specification-Driven Development》將此概念做一個較完整的整理並和 TDD (Test-Driven Development) 做比較。
-
-SDD 是否就只是用在 system structure, data flow, database schema, API spec 等定義上，而對於前端開發畫面來說沒什麼好寫? 有些前端開發者可能會覺得 UI 交付畫面後，就依設計稿來開發然後再串接對應的 API 最後做個簡單測試就完成了，SDD 似乎在前端沒什麼好寫的。在講前端的 SDD 可以寫什麼之前，我們需要先釐清撰寫 SDD 的主要目的和原因，對 SDD 有基本了解才能推敲前端的 SDD 適合寫什麼以及什麼情況下建議寫 SDD。
+SDD (Specification-Driven Development) 指的是規格驅動開發。意思是得知開發需求後，不先急著開發，而是先寫好規格文件。有些嚴謹的團隊會更進一步要求需經由專業人員審核規格文件後才能開始開發。SDD 近期廣受開發者討論，然而他並不是一個新創詞彙。SDD 的概念早在 1990s 就出現在 De Lucia, Andrea 的論文中，在 2004 年 Jonathan S. Ostroff, David Makalsky, Richard F. Paige 所發表的論文《Agile Specification-Driven Development》將此概念做一個較完整的整理並和 TDD (Test-Driven Development) 做比較。
 
 <br/>
 
-## 撰寫 SDD 的意義何在?
+SDD 是否就只是用在 system structure, data flow, database schema, API spec 等定義上，而對於前端開發畫面來說沒什麼好寫? 有些前端開發者可能會覺得 UI 交付畫面後，就依設計稿來開發然後再串接對應的 API 最後做個簡單測試就完成了，SDD 似乎在前端沒什麼好寫的。在講前端的 SDD 規格文件可以寫什麼之前，我們需要先釐清採用 SDD 的主要目的和原因，對 SDD 有基本了解才能推敲前端的 SDD 適合寫什麼規格定義以及什麼情況下建議使用 SDD。
+
+<br/>
+
+## 使用 SDD 的意義何在?
 SDD 的規格定義除了驗收標準、技術規格定義以外也包含了專案目的、需求和使用情境 (使用者故事) 的定義。相比技術規格的定義，目的和需求的定義更為核心，也就是所謂的「Why & What」。先把地基打好才能蓋出一個堅固可靠的建築，因此需要先搞清楚 “Why”， 為什麼我們要開發這項產品? 主要的目的為何? 並預期獲得怎樣的效果? 在這個階段若是覺得不符合邏輯和團隊目標就能先提出避免做白工；再來要搞清楚 “What”，哪些是必須要做的功能? 哪些是多餘或暫時無用的? 必要功能是否足夠滿足需求以實現目標? 這個階段能收斂後續開發內容。
 
-「Why & What」為基底且尚未涉及到技術層面的探討，所以非程式開發者也能撰寫自己的需求 spec 並收斂想實現的功能。在打底的同時也是在反思，例如誰會使用這個產品? 使用者會感興趣並達成團隊最初的目的? 這產品解決了什麼問題? 哪些結果才是最重要的? 第一步思考階段我認為是 SDD 規格定義中最重要的一環，因為你技術再怎麼好，架構設計的多完善或是使用者介面設計的多美，不是使用者的需求、沒有解決痛點，使用者也不會想使用。因此，撰寫 SDD 的意義在於釐清目的和需求，並且收斂想法，也就是說搞清楚狀況再做事。
+<br/>
+
+「Why & What」為基底且尚未涉及到技術層面的探討，所以非程式開發者也能撰寫自己的需求 spec 並收斂想實現的功能。在打底的同時也是在反思，例如誰會使用這個產品? 使用者會感興趣並達成團隊最初的目的? 這產品解決了什麼問題? 哪些結果才是最重要的? 第一步思考階段我認為是 SDD 規格定義中最重要的一環，因為你技術再怎麼好，架構設計的多完善或是使用者介面設計的多美，不是使用者的需求、沒有解決痛點，使用者也不會想使用。因此，使用 SDD 的意義在於釐清目的和需求，並且收斂想法，也就是說搞清楚狀況再做事。
 
 <br/>
 
 ## SDD 為何又熱鬧起來?
-SDD 這個開發模式之所以又再被拿出來熱烈討論的原因是受 AI 的 Vibe coding 所驅使。Vibe coding 在 AI 的寫程式能力下誕生，讓不會寫程式的人們能透過自然語言來寫出電腦上能運行的代碼，然而這樣的開發方式存在著一些問題，例如非專業技術人士可能會給出模糊或矛盾的描述進而導致 AI 輸出難以預測的程式碼，又或是發散了原本提出的需求。在這樣的背景之下，SDD 被拿來當作 Vibe coding 的解決辦法，在 SDD 明確且清楚的規格定義下，AI 不容易混淆和發散目的和需求。有些人認為 SDD 是 Vibe Coding 最具實踐性的未來方向，一些科技團隊馬上跟隨這波熱潮，開始推出 AI 輔助 SDD 的開發模式，像是知名代表 Amazon 的 Kiro 工具和 Github 開源的 spec-kit 工具等。
+SDD 這個開發模式之所以又再被拿出來熱烈討論的原因是受 AI 的 Vibe coding 所驅使。Vibe coding 在 AI 的寫程式能力下誕生，讓不會寫程式的人們能透過自然語言來寫出電腦上能運行的代碼，然而這樣的開發方式存在著一些問題，例如非專業技術人士可能會給出模糊或矛盾的描述進而導致 AI 輸出難以預測的程式碼，又或是發散了原本提出的需求。在這樣的背景之下，SDD 被拿來當作 Vibe coding 的解決辦法，在 SDD 明確且清楚的規格定義下，AI 不容易混淆和發散目的和需求。有些人認為 SDD 是 Vibe coding 最具實踐性的未來方向，一些科技團隊馬上跟隨這波熱潮，開始推出 AI 輔助 SDD 的開發模式，像是知名代表 Amazon 的 Kiro 工具和 Github 開源的 spec-kit 工具等。
 
 <br/>
 
-## 前端的 SDD 能寫什麼?
-寫到這有些疲憊，我後續有空補上
+## 前端的 SDD 規格文件能寫什麼?
+先強調一下，這裡是說 "能寫什麼" 而不是 "應該要寫什麼" 也不是 "一定要寫什麼"，再次強調這沒有一定的準則，像是有些前端的 SDD 是遵循團隊自己定義的規範，而有些團隊可能是採用 AI 工具的規則如 spec-kit 的 specify -> plan -> tasks -> implement，也有些小團隊是由工程師自由發揮 (無特定規範)。因此我這邊只是建議，不是什麼統整準則。
+
+<br/>
+
+個人覺得前端的 SDD 規格文件能寫以下項目: <b>1.目的 2.需求 3.預期結果 4.使用者角色和使用情境 5.必要功能 6.使用者操作流程 (含錯誤處理流程) 7.前端架構 8.前端介面線框圖 9.元件 (components) 10.狀態 (state) 11.元件的選擇器 (能先定義好方便後續做品檢的 QA) 12. 測試案例</b>
+
+<br/>
+
+前六點屬於先前 SDD 意義中提到的「Why & What」階段，也就是 SDD 的核心基底，讓團隊去思考討論，了解為什麼做、哪些是必要做的以及需要被檢視和驗證的事情。另外提一下，第二點的需求其實是會細分的，為滿足專案需求會再分出前端、後端、測試等需求，例如當要滿足一項專案，畫面的需求是什麼，需要包含前台和後台嗎，資料庫要儲存的資料需求、權限需求等。這些撰寫內容與專案整體需求不太一樣，相當於為滿足專案需求而延伸出的分支需求，分支需求也建議先定義好，這樣有助於後續的任務劃分。
+
+<br/>
+
+第七點之後的項目大多偏技術開發上的規格定義，而最後一項測試案例，很多流派會把它視為 SDD 規格文件的一環，但是我覺得不一定需要在開發前做，也可以當開發到某一個階段時再去寫測試規格文件，只要在開始測試前先定義好就行，畢竟得先了解要測什麼才能去做測試。看到這裡有些人不禁覺得前置準備時間太長，因為思考加上撰寫項目內容的時間也至少需要一週以上。其實在中大型專案上這現象很普遍，尤其是在 kick-off meeting 完後前期的討論和定義規劃就預計需要一個月。所以小型 prototype 或實驗型的專案就沒那麼適合 SDD 的開發模式，但是不管是否採取 SDD 的開發模式，都需要先釐清專案的目的。
+
+<br/>
+
+## 余談
+在開發產品上，一不小心其實容易發散核心需求，導致最後驗收不如預期，或是做出很多不必要或不實用的功能而主要功能卻不完善。需求需要圍繞著中心的目的，所以釐清產品開發背後的目的格外重要。其實開發者自己本身就有可能會發散需求更何況是使用 AI 來輔助開發，再者就是 AI 也可能會提議 "我可以幫你加上某某功能需要嗎"。我不否認 AI 工具在撰寫文件和開發上的便利性和效率，但這種方便也可能造成與初衷的脫鉤，然而，只要核心目的了然於胸，那 AI 的確是個加成利器。
 
 <br/>
 
 ## Reference
-https://etheses.dur.ac.uk/5273/?utm_source=chatgpt.com
-https://www.eecs.yorku.ca/~jonathan/publications/2004/xp2004.pdf?utm_source=chatgpt.com
-https://frontendatscale.com/issues/49/
-https://danielsogl.medium.com/spec-driven-development-sdd-the-evolution-beyond-vibe-coding-1e431ae7d47b
+[Identifying reusable functions in code using specification driven techniques - 1995](https://etheses.dur.ac.uk/5273/?utm_source=chatgpt.com)
+[Agile Specification-Driven Development](https://www.eecs.yorku.ca/~jonathan/publications/2004/xp2004.pdf?utm_source=chatgpt.com)
+[The Rise of Spec-Driven Development](https://frontendatscale.com/issues/49/)
+[Spec Driven Development (SDD): The Evolution Beyond Vibe Coding](https://danielsogl.medium.com/spec-driven-development-sdd-the-evolution-beyond-vibe-coding-1e431ae7d47b)
 
