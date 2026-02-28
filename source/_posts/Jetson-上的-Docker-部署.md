@@ -9,7 +9,7 @@ categories:
 - Docker
 ---
 
-最近工作上剛好接觸到 IPC - NVIDIA Jetson Orin Nano，開發和部署都會在 Jetson 上，由於NVIDIA Jetson 這類邊緣運算設備的容器部署並非像一般 PC 或雲端環境那樣已經有一套標準化流程，再加上牽扯到 GPU、Driver、硬體設備、系統版本，就會讓部署流程增加許多變數。因此，覺得這次的實戰經驗有一些內容可以記錄下來。
+最近工作上剛好接觸到 IPC - NVIDIA Jetson Orin Nano，開發和部署都會在 Jetson 上，由於 NVIDIA Jetson 這類邊緣運算設備的容器部署並非像一般 PC 或雲端環境那樣已經有一套標準化流程，再加上牽扯到 GPU、Driver、硬體設備、系統版本，就會讓部署流程增加許多變數。因此，覺得這次的實戰經驗有一些內容可以記錄下來。
 
 <!-- more -->
 
